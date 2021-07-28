@@ -19,6 +19,16 @@ Install complete NonLinLoc distribution software package
 	make
 
         Thanks to Gilles Celli (European Center for Geodynamics and Seismology) for creating and debugging the NonLinLoc CMake build system.
+	
+	If "‘for’ loop initial declarations are only allowed in C99 mode" error, edit the CMakeCache.txt by following:
+	//C compiler, use a newer version
+        CMAKE_C_COMPILER:FILEPATH=/packages/gcc/7.3/bin/gcc
+	
+	If "relocation truncated to fit" error during compiling, edit the CMakeCache.txt by following:
+	//Flags used by the C compiler during all build types.
+        CMAKE_C_FLAGS:STRING=-mcmodel=medium
+
+
 
 
 Documentation
