@@ -24,6 +24,9 @@ Install complete NonLinLoc distribution software package
 	//C compiler, use a newer version
         CMAKE_C_COMPILER:FILEPATH=/packages/gcc/7.3/bin/gcc
 	
+	If implicit declaration of function ‘strlcpy’ error, add function in Loc2ssst.c
+	https://stackoverflow.com/questions/18547251/when-i-use-strlcpy-function-in-c-the-compilor-give-me-an-error/23077129
+	
 	If "relocation truncated to fit" error during compiling, edit the CMakeCache.txt by following:
 	//Flags used by the C compiler during all build types.
         CMAKE_C_FLAGS:STRING=-mcmodel=medium
